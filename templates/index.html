@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title%}Enter amazon url{% endblock %}
+{% block content %}
+<div class="login">
+  <div class="login-triangle"></div>
+  
+  <h2 class="login-header">Enter Product url</h2>
+
+  <form class="login-container" method="POST" action="amazon/">
+  {% csrf_token %}
+    <p><input type="url" placeholder="Put Product url" name="amazon_url"></p>
+    {% comment %} <p><input type="password" placeholder="Password"></p> {% endcomment %}
+    <p><input type="submit" value="POST"></p>
+  </form>
+</div>
+{% endblock  %}
